@@ -41,7 +41,7 @@ func (c *Dropdown) Update(next spot.Control) bool {
 
 	if len(c.Items) != len(nextDropdown.Items) {
 		c.Items = nextDropdown.Items
-		c.ref.ClearItems()
+		c.ref.RemoveAllItems()
 		for _, item := range c.Items {
 			c.ref.AddItem(item)
 		}

@@ -29,6 +29,10 @@ func (comboBox *ComboBox) AddItem(item string) {
 	C.ComboBox_AddItem(comboBox.comboBoxPtr, C.CString(item))
 }
 
+func (comboBox *ComboBox) RemoveAllItems() {
+	C.ComboBox_RemoveAllItems(comboBox.comboBoxPtr)
+}
+
 func (comboBox *ComboBox) SetEditable(editable bool) {
 	if editable {
 		C.ComboBox_SetEditable(comboBox.comboBoxPtr, C.int(1))

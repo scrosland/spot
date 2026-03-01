@@ -23,6 +23,11 @@ void ComboBox_AddItem(ComboBoxPtr comboBoxPtr, const char *item) {
   [comboBox addItemWithObjectValue:[NSString stringWithUTF8String:item]];
 }
 
+void ComboBox_RemoveAllItems(ComboBoxPtr comboBoxPtr) {
+  NSComboBox *comboBox = (NSComboBox *)comboBoxPtr;
+  [comboBox removeAllItems];
+}
+
 void ComboBox_SetEditable(ComboBoxPtr comboBoxPtr, int editable) {
   NSComboBox *comboBox = (NSComboBox *)comboBoxPtr;
   [comboBox setEditable:editable];
