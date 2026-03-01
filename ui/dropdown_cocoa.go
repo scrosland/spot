@@ -41,10 +41,10 @@ func (c *Dropdown) Update(next spot.Control) bool {
 
 	if len(c.Items) != len(nextDropdown.Items) {
 		c.Items = nextDropdown.Items
-		// w.ref.ClearItems()
-		// for _, item := range w.Items {
-		// 	w.ref.AddItem(item)
-		// }
+		w.ref.ClearItems()
+		for _, item := range w.Items {
+			w.ref.AddItem(item)
+		}
 	}
 
 	if c.SelectedIndex != nextDropdown.SelectedIndex {
